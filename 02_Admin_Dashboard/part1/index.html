@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Visitor Dashboard</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,300,900,100' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.js"></script>
+    <script src="js/d3.js"></script>
+    <script src="js/react-with-addons-0.14.7.js"></script>
+    <script src="js/react-dom-0.14.7.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser-polyfill.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-63697603-2', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</head>
+<body>
+
+<div style="width:100%;height:75px;background-color:#ffffff;border-bottom: 1px solid #d5d5d6;margin-bottom: 10px;">
+
+
+    <div style="background-color: #e58c72;height: 100%;width:200px;line-height: 75px;text-align: center;color:#FFFFFF;font-size: 1.5em" class="pull-left">
+        <img src="img/logo.png" height="50px" style="padding-right:10px"> Admin
+    </div>
+    <div style="line-height: 75px;margin-left:20px;color:#6e6e74;font-size: 1.4em" class="pull-left">
+        Interaction Analytics
+    </div>
+</div>
+
+
+
+<div class="container">
+    <div class="row" style="padding-bottom: 10px;padding-left: 5px">
+        <div style="line-height: 30px">
+            <span style="color:#7f7f85;padding-right:10px;">
+                <svg width="10" height="10">
+                    <circle cx="5" cy="5" r="5" fill="#e58c72"/>
+                </svg>
+
+                Last 30 days</span>
+            <span style="color:#7f7f85">
+                <svg width="10" height="10">
+                    <circle cx="5" cy="5" r="5" fill="#8f8f8f"/>
+                </svg>
+
+                Last 3 months</span>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-xs-2 custom_padding">
+            <div class="header_card" style="background-color: #53c79f">
+                <div style="padding:10px 10px 5px 10px;color:#ffffff">
+                    <div class="pull-left">
+                        Visitors
+                    </div>
+                    <div class="pull-right">
+                        70%
+                    </div>
+                </div>
+                <hr class="hr-custom">
+                <div style="text-align: center;color:#ffffff;font-size: 3em;font-weight: 400">
+                    3,502
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-2 custom_padding">
+            <div class="header_card" style="background-color: #64b0cc">
+
+            </div>
+        </div>
+        <div class="col-xs-2 custom_padding">
+            <div class="header_card" style="background-color: #7a6fca">
+
+            </div>
+        </div>
+        <div class="col-xs-2 custom_padding">
+            <div class="header_card" style="background-color: #ca6f96">
+
+            </div>
+        </div>
+        <div class="col-xs-2 custom_padding">
+            <div class="header_card" style="background-color: #e58c72">
+
+            </div>
+        </div>
+        <div class="col-xs-2 custom_padding">
+            <div class="header_card" style="background-color: #7dc7f4">
+
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-xs-12 custom_padding" >
+            <div class="bg">
+                <div class="panel-header">
+                    <div class="pull-left" style="color:#6e6e74;font-size: 1.5em;font-weight: 300">Traffic Source</div>
+                    <div class="pull-right" style="line-height: 30px">
+                        <span style="color:#7f7f85;padding-right:10px;">
+                            <svg width="10" height="10">
+                                <circle cx="5" cy="5" r="5" fill="#e58c72"/>
+                            </svg>
+
+                            Last 30 days</span>
+                        <span style="color:#7f7f85">
+                            <svg width="10" height="10">
+                                <circle cx="5" cy="5" r="5" fill="#8f8f8f"/>
+                            </svg>
+
+                            Last 3 months</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-xs-6 custom_padding" >
+            <div class="bg">
+                <div class="panel-header">
+                    <div class="pull-left" style="color:#6e6e74;font-size: 1.5em;font-weight: 300">Traffic Source</div>
+                    <div class="pull-right" style="line-height: 30px">
+                        <span style="color:#7f7f85;padding-right:10px;">
+                            <svg width="10" height="10">
+                                <circle cx="5" cy="5" r="5" fill="#e58c72"/>
+                            </svg>
+
+                            Last 30 days</span>
+                        <span style="color:#7f7f85">
+                            <svg width="10" height="10">
+                                <circle cx="5" cy="5" r="5" fill="#8f8f8f"/>
+                            </svg>
+
+                            Last 3 months</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 custom_padding" >
+            <div class="bg">
+                <div class="panel-header">
+                    <div class="pull-left" style="color:#6e6e74;font-size: 1.5em;font-weight: 300">Traffic Source</div>
+                    <div class="pull-right" style="line-height: 30px">
+                        <span style="color:#7f7f85;padding-right:10px;">
+                            <svg width="10" height="10">
+                                <circle cx="5" cy="5" r="5" fill="#e58c72"/>
+                            </svg>
+
+                            Last 30 days</span>
+                        <span style="color:#7f7f85">
+                            <svg width="10" height="10">
+                                <circle cx="5" cy="5" r="5" fill="#8f8f8f"/>
+                            </svg>
+
+                            Last 3 months</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script type="text/babel" src="lib/charts/utils/SVGDefs.jsx"></script>
+<script src="lib/charts/utils/ReactMixins.js"></script>
+
+<script type="text/babel" src="lib/app.jsx"></script>
+
+</body>
+</html>

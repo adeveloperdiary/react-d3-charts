@@ -134,6 +134,8 @@ var MainContainer=React.createClass({
             data[i]=d;
         }
 
+        console.log(JSON.stringify(data));
+
 
         var dataArea=[];
 
@@ -155,6 +157,8 @@ var MainContainer=React.createClass({
             d.date = parseDate(d.day);
             dataArea[i]=d;
         }
+
+
 
         var margin={
             top: 20, right: 30, bottom: 20, left: 50

@@ -79,14 +79,6 @@ var Grid=React.createClass({
             .tickFormat("");
 
 
-        /*this.yGrid = d3.svg.axis()
-         .scale(this.yScale)
-         //.orient('left')
-         .ticks(5)
-         .tickSize(-this.props.len, 0, 0)
-         .tickFormat("");*/
-
-
         var node = ReactDOM.findDOMNode(this);
         d3.select(node).call(this.grid);
 

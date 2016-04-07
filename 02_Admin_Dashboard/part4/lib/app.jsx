@@ -383,7 +383,6 @@ var MainContainer=React.createClass({
             top: 20, right: 30, bottom: 20, left: 50
         };
 
-
         return(
             <div className="row">
                 <div className="col-md-6 custom_padding" >

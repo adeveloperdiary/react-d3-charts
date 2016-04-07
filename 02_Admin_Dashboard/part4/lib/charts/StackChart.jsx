@@ -91,46 +91,17 @@ var StackChart=React.createClass({
         }
         return object;
     },
-    createDefs:function(element,i){
-        var object;
-        switch(element.type){
-            case 'gradient':
-                object=(<D3Gradient id={element.props.id} color1={element.props.color1} color2={element.props.color2}/>);
-                break;
-        }
-        return object;
-    },
     render:function(){
         this.createChart(this);
 
         var elements;
-        var defs;
         var _self=this;
 
         if(this.props.children!=null) {
             if (Array.isArray(this.props.children)) {
                 elements=this.props.children.map(function(element,i){
-
-                    if(element.type!="defs")
-                        return _self.createElements(element,i)
+                    return _self.createElements(element,i)
                 });
-
-                for(var i=0;i<this.props.children.length;++i){
-                    if(this.props.children[i].type=="defs"){
-
-                        var config=this.props.children[i].props.children;
-                        if(config!=null){
-                            if(Array.isArray(config)){
-                                defs=config.map(function(elem,i){
-                                    return this.createDefs(elem,i)
-                                });
-                            }else{
-                                defs=this.createDefs(config,0);
-                            }
-                        }
-                    }
-                }
-
             }else{
                 elements=this.createElements(this.props.children,0)
             }
@@ -172,7 +143,6 @@ var StackChart=React.createClass({
         return (
             <div>
                 <svg id={this.props.chartId} width={this.state.width} height={this.props.height}>
-                    {defs}
                     <g transform={this.transform}>
                         {elements}
 

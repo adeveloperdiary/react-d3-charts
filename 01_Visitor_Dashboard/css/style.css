@@ -92,3 +92,37 @@ h3{
 .default-svg{
 
 }
+
+
+.svg-container{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.svg-content {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.fontSize {
+    font-size:.8em;
+    height: auto;
+    text-align: center;
+}
+
+.page-header{
+    height:35px;
+    textAlign:center;
+}
+
+.page-h4{
+    line-height:35px;
+    color:rgb(125, 199, 244);
+
+}

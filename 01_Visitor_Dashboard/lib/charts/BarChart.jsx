@@ -43,7 +43,7 @@ var BarChart=React.createClass({
 
         var y=d3.scale.linear()
             .domain([0,100])
-            .range([this.props.height,0]);
+            .range([h,0]);
 
 
         var rectBackground=(data).map(function(d, i) {
